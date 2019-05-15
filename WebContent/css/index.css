@@ -1,0 +1,67 @@
+.logo{
+  width: 17.3%;
+  float: left;
+  margin: 10px;
+}
+div{
+  float: right;
+}
+#btn1{
+  background-color: #D9D9D9;
+  margin: 5px;
+  border: 0;
+  width: 80px;
+  height: 30px;
+  font-family: "�굹�닎�뒪�섏뼱�씪�슫�뱶OTF Regular";
+  font-size: 17px;
+}
+.menu{
+  clear: right;
+  float: right;
+  background-color:#38985A;
+  width: 80%;
+  height: 20px;
+  margin: 10px;
+}
+#btn2{
+  background-color:#38985A;
+  border: 0;
+  width: 100px;
+  height: 20px;
+  font-family: "�굹�닎�뒪�섏뼱�씪�슫�뱶OTF Regular";
+  font-size: 15px;
+  color: white;
+  margin-right: 10px;
+}
+.banner{
+  width: 98.6%;
+  margin: 10px;
+}
+.footer{
+  width: 98.6%;
+  margin: 10px;
+}
+td{
+  font-family: "�굹�닎�뒪�섏뼱�씪�슫�뱶OTF Regular";
+  text-align: center;
+}
+#a{
+  width: 30%;
+  height: 180px;
+  margin:10px;
+  background: #D9D9D9;
+}
+#b{
+  width: 35%;
+  height: 40px;
+  margin: 10px;
+  background: #D9D9D9;
+}
+#c{
+  background: #FAF4C0;
+}
+
+div{
+  padding:15px;
+  text-align:center;
+}

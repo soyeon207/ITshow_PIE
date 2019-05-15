@@ -1,0 +1,56 @@
+.nav-item a{
+	color:white;
+	float:left;
+	background-color:#38985A;
+}
+
+.b_color{
+	
+	background-color:#38985A;
+}
+
+.nav-item a:hover{
+	color: black;
+}
+
+li{
+	text-align: center;
+	margin: 10px;
+	font-size: 20px;
+}
+                	
+#side_menu{
+	width: 40%;
+	float: right;
+	list-style: none;
+	text-align: right;
+}
+        	
+#side_menu li{
+	display: inline;
+}
+        	
+#side_menu a{
+	font-size: 50%;
+	color: black;
+	padding: 5px 10px;
+}
+
+.logoImg{
+	max-width: 150px;
+	min-width: 150px;
+	margin-bottom: 15px;
+	float: left;
+}
+
+a{
+	text-decoration: none;
+}
+
+.justify-content-center{
+	color:white;
+	background-color: #38985A;
+	text-align: center;
+	padding-top: 10px;
+	position: relative;
+}
