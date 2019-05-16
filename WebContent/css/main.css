@@ -15,6 +15,11 @@
 	float: right;
 	clear: right;
 }
+.bold_font{
+	color: #38985A;
+	font-weight:bold;
+	font-size:20px;
+}
 .font {
 	color: #38985A;
 	font-size: 14px;
