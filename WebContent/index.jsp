@@ -83,20 +83,6 @@
         	
     		</div>
     		
-    		<div class="section active" id="section1">
-        		<div class="square">
-		<ul class="graph">
-        	<li class="graph_li"><div style="height:<%= height %>00px"></div></li>
-        	<li class="graph_li"><div style="height:<%= height %>00px"></div></li>
-        	<li class="graph_li"><div style="height:<%= height %>00px"></div></li>
-        	<br>
-        	<li class="graph_date"><font><%= today-2 %>일</font></li>
-        	<li class="graph_date"><font><%= today-1 %>일</font></li>
-        	<li class="graph_date"><font><%= today %>일</font></li>
-    	</ul>
-    	</div>
-    		</div>
-    		
     		<div class="section" id="section2">
         		<div class="intro">
             		<table class="center">
