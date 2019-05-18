@@ -28,15 +28,17 @@
     			  pager: true,
     			  slideWidth: 300
     			}); 
+    		  
+    		  $('.yester_num').text('70');
+    		  $('.today_num').text('80');
+    		  $('.yester_num').click(function() {
+    			  $('#yester_mul').css("display","inline");
+    		  });
+    		  $('.today_num').click(function() {
+    			  $('#today_mul').css("display","inline");
+    		  });    		  
     	  });
     	
-    	$(function(){
-  		  $('.yester_num').text('70');
-    	});
-            
-    	$(function(){
-  		  $('.today_num').text('80');
-    	});
     	
         </script>
     </head>
@@ -63,13 +65,31 @@
 
 			<section class="number">
 				<article id="yesterday">
-					<span class="title">오늘 들어온 분실물</span><br> <span
-						class="yester_num">50</span>
+					<span class="title">오늘 들어온 분실물</span><br> 
+					<span class="yester_num">
+					50
+					</span>
+					        <select multiple size="5" style="width:100px;text-align:center;display:none;" id="yester_mul">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
 				</article>
 
 				<article id="today">
-					<span class="title">어제 들어온 분실물</span><br> <span
-						class="today_num">60</span>
+					<span class="title">어제 들어온 분실물</span><br> 
+					<span class="today_num">60</span>
+					        <select multiple size="5" style="width:100px;text-align:center;display:none" id="today_mul">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
 				</article>
 
 			</section>
