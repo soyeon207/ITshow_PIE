@@ -24,7 +24,7 @@
         </ul><br>
         <div class="justify-content-center">
         	<div style="margin-left: 15px">
-				<a href="index.jsp">
+				<a href="index_temp.jsp">
 					<img src="img/logo.png" alt="logo" class="logoImg">
 				</a>
         	</div>

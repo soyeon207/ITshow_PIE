@@ -11,7 +11,6 @@
        	
     	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     	<link rel="stylesheet" type="text/css" href="css/examples.css" />
-    	<link rel="stylesheet" type="text/css" href="css/nav.css"/>
     	<link rel="stylesheet" type="text/css" href="css/index_slide.css"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 		
