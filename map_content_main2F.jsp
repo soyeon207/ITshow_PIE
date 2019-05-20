@@ -25,9 +25,8 @@
 <area id="옆계단" alt="옆계단" title="옆계단" href="http://www.image-maps.com/" shape="rect" coords="304,388,419,449" style="outline:none;" target="_self"     />
 <area id="남자화장실" alt="남자화장실" title="남자화장실" href="http://www.image-maps.com/" shape="rect" coords="227,379,301,445" style="outline:none;" target="_self"     />
 <area id="상담실" alt="상담실" title="상담실" href="http://www.image-maps.com/" shape="rect" coords="227,449,301,520" style="outline:none;" target="_self"     />
-<area  alt="" title="3교무실" href="http://www.image-maps.com/" shape="rect" coords="446,524,539,615" style="outline:none;" target="_self"     />
+<area id="3교무실" alt="" title="3교무실" href="http://www.image-maps.com/" shape="rect" coords="446,524,539,615" style="outline:none;" target="_self"     />
 <area id="대외협력실" alt="대외협력실" title="대외협력실" href="http://www.image-maps.com/" shape="rect" coords="150,694,265,757" style="outline:none;" target="_self"     />
-<area id="미림여고교장실" alt="미림여고교장실" title="미림여고교장실" href="http://www.image-maps.com/" shape="rect" coords="264,691,407,760" style="outline:none;" target="_self"     />
 <area id="행정실" alt="행정실" title="행정실" href="http://www.image-maps.com/" shape="rect" coords="406,695,537,761" style="outline:none;" target="_self"     />
 <area id="중앙계단" alt="중앙계단" title="중앙계단" href="http://www.image-maps.com/" shape="rect" coords="537,694,664,758" style="outline:none;" target="_self"     />
 <area id="교장실" alt="교장실" title="교장실" href="http://www.image-maps.com/" shape="rect" coords="665,698,799,756" style="outline:none;" target="_self"     />

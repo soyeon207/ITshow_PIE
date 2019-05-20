@@ -9,7 +9,7 @@
 <body>
 <img id="Image-Maps-Com-image-maps-2019-05-06-093002" src="http://www.image-maps.com/m/private/0/f90pona6hfe9sk9k61fmj3f147_1.png" border="0" width="1165" height="742" orgWidth="1165" orgHeight="742" usemap="#image-maps-2019-05-06-093002" alt="" />
 <map name="image-maps-2019-05-06-093002" id="ImageMapsCom-image-maps-2019-05-06-093002">
-<area id="체육관" alt="체육관" title="체육관" href="체육관" shape="rect" coords="3,169,128,388" style="outline:none;" target="_self"     />
+<area id="체육관" alt="체육관" title="체육관" href="table_map.jsp" shape="rect" coords="3,169,128,388" style="outline:none;" target="_self"     />
 <area id="다목적실" alt="다목적실" title="다목적실" href="다목적실" shape="rect" coords="243,169,418,270" style="outline:none;" target="_self"     />
 <area id="운동장" alt="운동장" title="운동장" href="운동장" shape="rect" coords="125,386,879,621" style="outline:none;" target="_self"     />
 <area id="현관" alt="현관" title="현관" href="현관" shape="rect" coords="516,171,688,271" style="outline:none;" target="_self"     />
