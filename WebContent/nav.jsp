@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,7 +17,6 @@
 <title>Hello, world!</title>
   </head>
   <body>
-      
       <nav>
         <ul id="side_menu">
         	<li><a href="login.jsp">로그인</a></li>
@@ -49,5 +46,4 @@
 			</div>
 		</div>
   	</nav>
-  </body>
-</html>
+ </body>

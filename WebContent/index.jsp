@@ -46,23 +46,6 @@
 
 	<div id="fullpage">
 		<div class="section" id="section0">
-			<ul id="side_menu">
-				<li><a href="login.jsp">로그인</a></li>
-				<li><a href="join.jsp">회원가입</a></li>
-			</ul>
-			<br>
-			<div class="b_color" style="height: 50px;">
-				<ul class="justify-content-center">
-					<li class="nav-item"><a class="nav-link active"
-						href="request_board.jsp"> 찾습니다 </a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="response_board.jsp"> 찾아가세요 </a></li>
-					<li class="nav-item"><a class="nav-link" href="#"> 유기물품 </a></li>
-					<li class="nav-item"><a class="nav-link" href="#"> My page
-					</a></li>
-				</ul>
-			</div>
-
 			<section class="number">
 				<article id="yesterday">
 					<span class="title">오늘 들어온 분실물</span><br> 

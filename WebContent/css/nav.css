@@ -1,10 +1,11 @@
 nav{
-    		position: absolute;
+    		position: fixed;
     		top: 0;
     		left: 0;
     		right: 0;
     		height: 63px;
     		vertical-align: middle;
+    		z-index: 1000;
     	}
         .nav-item a{
         	color:white;
