@@ -23,7 +23,7 @@
 <table width=100% height=100% border=0 cellpadding=0 cellspacing=0>
 	<tr height="100px">
 		<td>
-			<jsp:include page="nav.jsp" flush="false"/>
+			<jsp:include page="login_nav.jsp" flush="false"/>
 		</td>
 		
 	</tr>

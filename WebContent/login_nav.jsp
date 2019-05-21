@@ -31,10 +31,10 @@
         	<div class="right">
 				<ul>
 					<li class="nav-item">
-						<a class="nav-link active" href="request_board.jsp">찾습니다</a>
+						<a class="nav-link" href="table.jsp">찾습니다</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="response_board.jsp">찾아가세요</a>
+						<a class="nav-link" href="map_main1F.jsp">찾아가세요</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">유기물품</a>
