@@ -4,7 +4,7 @@
   border: 0;
   width: 80px;
   height: 30px;
-  font-family: "占쎄돌占쎈땸占쎈뮞占쎌꼷堉깍옙�뵬占쎌뒲占쎈굡OTF Regular";
+  font-family: BebasNeueRegular, "나눔스퀘어라운드OTF";
   font-size: 17px;
 }
 .menu{
@@ -20,7 +20,7 @@
   border: 0;
   width: 100px;
   height: 20px;
-  font-family: "占쎄돌占쎈땸占쎈뮞占쎌꼷堉깍옙�뵬占쎌뒲占쎈굡OTF Regular";
+  font-family: BebasNeueRegular, "나눔스퀘어라운드OTF";
   font-size: 15px;
   color: white;
   margin-right: 10px;
@@ -47,7 +47,7 @@
 	border: 1px solid #999;
 }
 #header td{
-  font-family: "占쎄돌占쎈땸占쎈뮞占쎌꼷堉깍옙�뵬占쎌뒲占쎈굡OTF Regular";
+  font-family: BebasNeueRegular, "나눔스퀘어라운드OTF";
   text-align: center;
 }
 #a{

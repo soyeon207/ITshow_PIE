@@ -1,6 +1,5 @@
-
 *{
-    font-family:"나눔스퀘어라운드OTF Regular"
+    font-family: BebasNeueRegular, "나눔스퀘어라운드OTF";
 }
 #div1{
 display:"none";
@@ -14,7 +13,7 @@ width:200px;
 button{
 width:120px;
 height:40px;
-font-family: "나눔스퀘어라운드OTF Regular";
+font-family: "BebasNeueRegular";
 font-size: 17px;
 margin:10px;
 border:0px;

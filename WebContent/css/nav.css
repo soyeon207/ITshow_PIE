@@ -1,64 +1,64 @@
-nav{
-    		position: fixed;
-    		top: 0;
-    		left: 0;
-    		right: 0;
-    		height: 63px;
-    		vertical-align: middle;
-    		z-index: 1000;
-    	}
-        .nav-item a{
-        	color:white;
-        }
-        .nav-item a:hover{
-        	color: black;
-        }       	
-        #side_menu{
-        	width: 40%;
-            float: right;
-        	list-style: none;
-        	text-align: right;
-        }
-        #side_menu li{
-        	display: inline;
-        }
-        #side_menu a{
-        	font-size: 70%;
-        	color: black;
-        	padding: 5px 10px;
-        }
-        .logoImg{
-        	max-height: 63px;
-        	height: 63px;
-        	margin-bottom: 15px;
-            float: left;
-        }
-        a{
-        	text-decoration: none;
-        }
-        .justify-content-center{
-        	background-color: #38985A;
-            padding-top: 10px;
-            position: absolute;
-            min-width: 100%;
-        }
-        .justify-content-center li{
-        	display: inline-block;
-            list-style-type: none;
-            margin-left: 120px;
-            margin-top: 10px;
-            font-size: 13pt;
-        }
-		.link{
-			vertical-align: middle;
-			text-align: right;
-			position: relative;
-			right: 0;
-		}
-		.right{
-			text-align: right;
-			width: 100%;
-		}
-		.right li:last-child{
-			margin-right: 70px;
-		}  
+nav{		
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 63px;
+	vertical-align: middle;
+	z-index: 1000;
+}
+.nav-item a{
+   	color:white;
+}
+.nav-item a:hover{
+   	color: black;
+}       	
+#side_menu{
+   	width: 40%;
+    float: right;
+   	list-style: none;
+   	text-align: right;
+}
+#side_menu li{
+ 	display: inline;
+}
+#side_menu a{
+   	font-size: 70%;
+   	color: black;
+   	padding: 5px 10px;
+}
+.logoImg{
+   	max-height: 63px;
+   	height: 63px;
+   	margin-bottom: 15px;
+    float: left;
+}
+a{
+   	text-decoration: none;
+}
+.justify-content-center{
+   	background-color: #38985A;
+    padding-top: 10px;
+    position: absolute;
+    min-width: 100%;
+}
+.justify-content-center li{
+ 	display: inline-block;
+    list-style-type: none;
+    margin-left: 120px;
+    margin-top: 10px;
+    font-size: 13pt;
+}
+.link{
+	vertical-align: middle;
+	text-align: right;
+	position: relative;
+	right: 0;
+}
+.right{
+	text-align: right;
+	width: 100%;
+}
+.right li:last-child{
+	margin-right: 70px;
+}  
