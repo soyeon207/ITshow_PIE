@@ -1,7 +1,7 @@
 .number{
-                color:#38985A;
-                font-weight: bold;
-                width:100%;
+    color:#38985A;
+    font-weight: bold;
+    width:100%;
 }
 .title{
 	font-size:30px;
@@ -44,28 +44,28 @@
     margin-top: -120px;
 }
 
-            #today, #yesterday{
-                float:left;
-                width:50%;
-                font-size: 250px;
-                text-align: center;
-            }
-            .graph{
-        	padding-top:20px;
-        }
-        .graph_li{
-        	float:left;
-        	width:100px;
-        	list-style:none;
-        	background:red;
-        	margin-left:40px;
-        }
-        .graph_date{
-        	float:left;
-        	width:100px;
-        	list-style:none;
-        	margin-left:40px;
-        }
-        .square{
-        	border:1px solid gray;
-        }
+ #today, #yesterday{
+    float:left;
+    width:50%;
+    font-size: 250px;
+    text-align: center;
+}
+.graph{
+  	padding-top:20px;
+}
+.graph_li{
+  	float:left;
+  	width:100px;
+  	list-style:none;
+  	background:red;
+   	margin-left:40px;
+}
+.graph_date{
+  	float:left;
+  	width:100px;
+   	list-style:none;
+   	margin-left:40px;
+}
+.square{
+   	border:1px solid gray;
+}
