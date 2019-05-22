@@ -33,6 +33,8 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	int space = Integer.parseInt(request.getParameter("space"));
+	
+	System.out.println(space);
 %>
 <form action="proc_table_found_write.jsp" name="frm" method="post">
 	<table>

@@ -25,14 +25,14 @@
 	
 	System.out.println(space);
 		
-	String select_result_query = "select * from found_board where space=" + space;
-	String select_count_query = "select count(*) from found_board where space=" + space;
+	String select_board_result = "select * from found_board where space=" + space;
+	String select_board_count = "select count(*) from found_board where space=" + space;
 	
 	stmt = conn.createStatement();
-	rs = stmt.executeQuery(select_count_query);
+	rs = stmt.executeQuery(select_board_count);
 	if(rs.next()) count = rs.getInt(1);
 	
-	rs = stmt.executeQuery(select_result_query);
+	rs = stmt.executeQuery(select_board_result);
 	
 	if(count == 0){ %>
 	<tr>
@@ -41,6 +41,7 @@
 <%	}
 	else {
 		while(rs.next()){
+			int bnum = rs.getInt("bnum");
 			String d_day = rs.getString("d_day");
 			String title = rs.getString("title");
 			String id = rs.getString("id");
@@ -49,7 +50,7 @@
 	<tr>
 		<td>1</td>
 		<td><%= d_day %></td>
-		<td><%= title %></td>
+		<td><a href="table_found_content.jsp?bnum=<%= bnum %>"><%= title %></a></td>
 		<td><%= id %></td>
 		<td><%= date %></td>
 	</tr>

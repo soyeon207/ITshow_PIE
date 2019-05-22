@@ -18,20 +18,25 @@
 	
 	try{ 
 		//파일 -> db저장
-		File imgfile = new File(file_url); 
-		FileInputStream fin = new FileInputStream(imgfile); 
-		pstmt = conn.prepareStatement(file_query); 
-		pstmt.setInt(1,4); 
-		pstmt.setBinaryStream(2,fin,(int)imgfile.length());//Stream형의 파일 업로드 
-		pstmt.executeUpdate(); 
-		System.out.println("Inserting Fileboard Successfully!"); 
+		if(file_url != null){
+			File imgfile = new File(file_url); 
+			FileInputStream fin = new FileInputStream(imgfile); 
+			pstmt = conn.prepareStatement(file_query); 
+			pstmt.setInt(1,4); 
+			pstmt.setBinaryStream(2,fin,(int)imgfile.length());//Stream형의 파일 업로드 
+			pstmt.executeUpdate(); 
+			System.out.println("Inserting Fileboard Successfully!"); 
+		}
+		else{
+			System.out.println("애초에 파일 아안넣엇는뎅 ㅎ"); 
+		}
 		
 		//board내용 -> db저장
 		pstmt = conn.prepareStatement(board_query); 
 		pstmt.setString(1,title); 
 		pstmt.setString(2,contents); 
 		pstmt.setTimestamp(3,date);
-		pstmt.setInt(4,1);
+		pstmt.setInt(4,space);
 		pstmt.setString(5,"아이디");
 		pstmt.executeUpdate(); 
 		
@@ -42,6 +47,10 @@
 	catch (Exception e){ 
 		System.out.println(e.getMessage()); 
 	} 
+	finally{ 
+
+		System.out.println("되긴하냐 미처버리겟네"); 
+		response.sendRedirect("table_found.jsp?space=" + space);
+	}
 
 %>
-<jsp:forward page="table_found.jsp?space=<%= space %>"/>
