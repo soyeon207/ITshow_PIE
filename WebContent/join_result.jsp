@@ -25,7 +25,11 @@
 <% 
 		}catch (Exception e){ 
 			System.out.println(e.getMessage());
-			out.print("회원가입에 실패하셨습니다<br>다시 시도해주세요");
+%>
+			<jsp:forward page="Template.jsp">
+				<jsp:param value="join_fail.jsp" name="CONTENTPAGE"/>
+			</jsp:forward>
+<%
 		}
 %>
 

@@ -3,16 +3,7 @@
 <html>
 <head>
     <title>회원가입 완료</title>
-	<style type="text/css">
-		.welcome{
-			border: 1px solid #666;
-			padding: 60px;
-			width: 300px;
-		}
-		#box{
-			margin-top: 30px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/join.css" />
 </head>
 <body>
 <div align="center" id="box">
