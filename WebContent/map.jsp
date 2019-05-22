@@ -19,7 +19,7 @@ body {
   width: 200px;
   position: fixed;
   z-index: 1;
-  top: 100px;
+  top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
@@ -83,42 +83,31 @@ body {
 	String pagename = request.getParameter("PAGENAME");
 %>
 <body>
-<table width="100%" height="100%">
-	<tr height="120px">
-		<td>
-			<jsp:include page="login_nav.jsp"/>	
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<div class="sidenav">
-			  <button class="dropdown-btn">본관 
-			    <i class="fa fa-caret-down"></i>
-			  </button>
-			  <div class="dropdown-container">
-			    <a href="map_main1F.jsp">1층</a>
-			    <a href="map_main1.5F.jsp">1.5층</a>
-			    <a href="map_main2F.jsp">2층</a>
-			    <a href="map_main3F.jsp">3층</a>
-			    <a href="map_main4F.jsp">4층</a>
-			  </div>
-			  <button class="dropdown-btn">강당동
-			    <i class="fa fa-caret-down"></i>
-			  </button>
-			  <div class="dropdown-container">
-			  	<a href="map_audi1B.jsp">지하</a>
-			    <a href="map_audi1F.jsp">1층</a>
-			    <a href="map_audi2F.jsp">2층</a>
-			  </div>
-			</div>
-		</td>
-		<td align="center">
-			<div class="main">
-				<jsp:include page="<%=pagename%>"></jsp:include>
-			</div>
-		</td>
-	</tr>
-</table>
+<div class="sidenav">
+  <button class="dropdown-btn">본관 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="map_main1F.jsp">1층</a>
+    <a href="map_main1.5F.jsp">1.5층</a>
+    <a href="map_main2F.jsp">2층</a>
+    <a href="map_main3F.jsp">3층</a>
+    <a href="map_main4F.jsp">4층</a>
+  </div>
+  <button class="dropdown-btn">강당동
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+  	<a href="map_audi1B.jsp">지하</a>
+    <a href="map_audi1F.jsp">1층</a>
+    <a href="map_audi2F.jsp">2층</a>
+  </div>
+  <a href="table_found.jsp?space=76"><button class="dropdown-btn">복도</button></a>
+</div>
+
+<div class="main">
+<jsp:include page="<%=pagename%>"></jsp:include>
+</div>
 
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
