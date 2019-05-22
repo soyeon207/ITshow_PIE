@@ -24,13 +24,12 @@
     </script>
 </head>
 <body>
-    <form action="join_proc.jsp" method="post" name="userInfo" onsubmit="return checkValue()">
+    <form action="join_result.jsp" method="post" name="userInfo" onsubmit="return checkValue()">
         <div id = "header">
 	        <table width="90%" cellpadding="10" border= "1" align="center" rules="groups">
                 <tr>
                     <td width=300 align="center">
                     	<input type="text" name="id" maxlength="30" placeholder="아이디">
-						<input type="button" value="중복확인">
 					</td>
                 </tr>
                 <tr>
