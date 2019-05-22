@@ -10,7 +10,12 @@
 </head>
 <body>
 <%@include file="db_conn.jsp"%>
-<table>
+<table width="100%">
+	<tr height="150px">
+		<td colspan="5">
+			<jsp:include page="nav.jsp" flush="false"/>
+		</td>
+	</tr>
 	<tr>
 		<td>숫자</td>
 		<td>남은 날짜</td>
@@ -59,7 +64,7 @@
 		} 
 %>
 	<tr>
-		<td colspan="5"><a href="table_found_write.jsp?space=<%= space %>"><button>글쓰기</button></a></td>
+		<td colspan="5" style=""><a href="table_found_write.jsp?space=<%= space %>"><button>글쓰기</button></a></td>
 	</tr>
 </table>
 </body>

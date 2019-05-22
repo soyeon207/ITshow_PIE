@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file="db_conn.jsp"%>
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -24,6 +25,26 @@
     </script>
 </head>
 <body>
+<%-- <%
+	request.setCharacterEncoding("UTF-8");
+	
+	String result;
+	String sql = "select id from member";
+	
+	try{
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()){
+			if(rs.getString("id").equals(id)){
+				result = pageContext.setAttribute("result", true);
+			}
+		}
+	}catch(SQLException e){
+		e.printStackTrace();
+	}
+	result = pageContext.setAttribute("result", false);
+%> --%>
     <form action="join_result.jsp" method="post" name="userInfo" onsubmit="return checkValue()">
         <div id = "header">
 	        <table width="90%" cellpadding="10" border= "1" align="center" rules="groups">

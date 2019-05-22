@@ -36,33 +36,44 @@
 	
 	System.out.println(space);
 %>
-<form action="proc_table_found_write.jsp" name="frm" method="post">
-	<table>
-		<tr>
-			<td>
-				<input type="text" id="title" name="title">
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<textarea id="contents" name="contents"></textarea>
-				<input type="hidden" name="space" value="<%= space %>">
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="file" id="f" name="f">
-				<input type="hidden" name="file">
-			</td>
-			
-		</tr>
-		<tr>
-			<td>
-				<input type="button" value="작성" onclick="formChk()">
-				<input type="reset" value="다시">
-			</td>
-		</tr>
-	</table>
-</form>
+<table>
+	<tr height="150px">
+		<td>
+			<jsp:include page="nav.jsp" flush="false"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<form action="proc_table_found_write.jsp" name="frm" method="post">
+				<table>
+					<tr>
+						<td>
+							<input type="text" id="title" name="title">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea id="contents" name="contents"></textarea>
+							<input type="hidden" name="space" value="<%= space %>">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="file" id="f" name="f">
+							<input type="hidden" name="file">
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							<input type="button" value="작성" onclick="formChk()">
+							<input type="reset" value="다시">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>
 </body>
 </html>

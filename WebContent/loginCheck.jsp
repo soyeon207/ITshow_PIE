@@ -8,11 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%!
+		String id, pw;
+	%>
 	<%
 	request.setCharacterEncoding("UTF-8");
 
-	String id = request.getParameter("id");
-	String pw = request.getParameter("pw");
+	id = request.getParameter("id");
+	pw = request.getParameter("pw");
 	
 	String select_member = "select pw from member where id=?";
 	
@@ -22,10 +25,10 @@
 	
 	if(rs.next()) {
 		if(rs.getString(1).equals(pw)){
-			out.println("<script>");
-			out.println("alert('로그인 되었습니다. 환영합니다 :) ')");
-			out.println("location.href='index_temp.jsp'");
-			out.println("</script>");
+			Cookie cookie = new Cookie("id", id);
+			cookie.setMaxAge(60);
+			response.addCookie(cookie);
+			response.sendRedirect("index_temp.jsp");
 		}else{
 			out.println("<script>");
 			out.println("alert('정보가 틀렸습니다!')");

@@ -8,7 +8,7 @@
 	contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-String db_url = "jdbc:mysql://10.96.124.186:3305/lost_and_found?useUnicode=yes&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC";
+String db_url = "jdbc:mysql://10.96.123.171:3306/lost_and_found?useUnicode=yes&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC";
 String db_user = "mirim";
 String db_pw = "mirim12345!";
 
@@ -20,7 +20,7 @@ ResultSet rs = null;
 try{
 	Class.forName("com.mysql.jdbc.Driver");
 	conn = DriverManager.getConnection(db_url, db_user, db_pw);
-	out.println("연결 성공");
+	System.out.println("연결 성공");
 }catch(ClassNotFoundException e1){
 	System.out.println("드라이버 ㅅㅂ 로드문제");
 	e1.printStackTrace();
