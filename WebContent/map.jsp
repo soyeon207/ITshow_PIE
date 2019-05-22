@@ -102,7 +102,7 @@ body {
     <a href="map_audi1F.jsp">1층</a>
     <a href="map_audi2F.jsp">2층</a>
   </div>
-  <a href="table_found.jsp?space=76"><button class="dropdown-btn">복도</button></a>
+  <button class="dropdown-btn" onclick="javascript:location.href='table_found.jsp?space=76'">복도</button>
 </div>
 
 <div class="main">
