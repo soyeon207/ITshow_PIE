@@ -10,7 +10,7 @@
     <body>
         <form action="loginCheck.jsp" method="post">
             <div id = "header">
-	            <table width="90%" cellpadding="10" border= "1" align="center" rules="groups">
+	            <table width="90%" cellpadding="10" border="1" align="center" rules="groups">
 	                <tr>
 	                    <td width=300 align="center"><input type="text" name="id" placeholder="아이디"></td>
 	                </tr>

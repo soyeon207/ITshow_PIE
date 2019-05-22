@@ -14,7 +14,7 @@
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	
-	String select_member = "select pw from member where id = ?";
+	String select_member = "select pw from member where id=?";
 	
 	pstmt = conn.prepareStatement(select_member);
 	pstmt.setString(1, id);
