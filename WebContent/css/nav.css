@@ -13,53 +13,61 @@ nav{
 .nav-item a:hover{
    	color: black;
 }       	
-#side_menu{
-   	width: 40%;
-    float: right;
-   	list-style: none;
-   	text-align: right;
-}
-#side_menu li{
- 	display: inline;
-}
-#side_menu a{
-   	font-size: 70%;
-   	color: black;
-   	padding: 5px 10px;
-}
 .logoImg{
    	max-height: 63px;
    	height: 63px;
    	margin-bottom: 15px;
-   	margin-left:15px;
+   	margin-left:80px;
     float: left;
 }
 a{
    	text-decoration: none;
 }
 .justify-content-center{
-   	background-color: #81c147;
+   	background-color: #55ce3c;
     padding-top: 10px;
     position: absolute;
     min-width: 100%;
 }
-.justify-content-center li{
+.justify-content-center ul{
+ 	display: inline-block;
+ 	float: right;
+}
+.content-li{
  	display: inline-block;
     list-style-type: none;
-    margin-left: 120px;
+    margin-left: 80px;
     margin-top: 10px;
     font-size: 13pt;
 }
-.link{
-	vertical-align: middle;
-	text-align: right;
-	position: relative;
-	right: 0;
+.user{
+	float: right;
+	margin-right: 80px;
 }
-.right{
-	text-align: right;
-	width: 100%;
+
+.user li{
+ 	display: inline-block;
+    list-style-type: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 13pt;
 }
-.right li:last-child{
-	margin-right: 70px;
-}  
+
+.button {
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.button1{
+	background: #55ce3c;
+	color: black;
+	border: 2px solid #41aa2b;
+}
+.button1:hover{
+	background: #41aa2b;
+	color: white;
+}

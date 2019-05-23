@@ -18,28 +18,30 @@
   </head>
   <body>
       <nav>
-        <ul id="side_menu">
-        	<li><a href="login.jsp">로그인</a></li>
-        	<li><a href="join.jsp">회원가입</a></li>
-        </ul><br>
         <div class="justify-content-center">
-        	<div style="margin-left: 15px">
+        	<div>
 				<a href="index_temp.jsp">
 					<img src="img/logo.png" alt="logo" class="logoImg">
 				</a>
-        	</div>
-        	<div class="right">
-				<ul>
-					<li class="nav-item">
+				<ul class="user">
+					<li>
+						<a href="login.jsp" class="button button1 nav-link">로그인</a>
+					</li>
+			    	<li>
+			    		<a href="join.jsp" class="button button1 nav-link">회원가입</a>
+			    	</li>
+				</ul>
+				<ul style="position: absolute; right: 350px;">
+					<li class="nav-item content-li">
 						<a class="nav-link" href="table.jsp">찾습니다</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item content-li">
 						<a class="nav-link" href="map_main1F.jsp">찾아가세요</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item content-li">
 						<a class="nav-link" href="#">유기물품</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item content-li">
 						<a class="nav-link" href="#">My page</a>
 					</li>
 				</ul>

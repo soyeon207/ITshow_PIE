@@ -1,5 +1,5 @@
 .number{
-    color:#38985A;
+    color:#55ce3c;
     font-weight: bold;
     width:100%;
 }
@@ -22,7 +22,7 @@
 	clear: right;
 }
 .font {
-	color: #38985A;
+	color: #55ce3c;
 	font-size: 14px;
 	font-weight: bold;
 }
@@ -47,7 +47,7 @@
  #today, #yesterday{
     float:left;
     width:50%;
-    font-size: 250px;
+    font-size: 200px;
     text-align: center;
 }
 .graph{

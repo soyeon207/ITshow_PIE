@@ -44,6 +44,40 @@
     <body>
 
 	<div id="fullpage">
+		<div class="section" id="section2">
+				<div style="width:50%;float:left;color:#55ce3c;font-weight:bold;font-size:20px" >
+					오늘 들어온 분실물
+					<center>
+						<div class="bxslider">
+						<div>
+							<img src="img/1.png">
+						</div>
+						<div>
+							<img src="img/2.png">
+						</div>
+						<div>
+							<img src="img/3.png">
+						</div>
+					</div>	
+					</center>		
+				</div>
+				<div style="width:50%;float:left;color:#55ce3c;font-weight:bold;font-size:20px">
+					어제 들어온 분실물
+					<center>
+					<div class="bxslider">
+						<div>
+							<img src="img/1.png">
+						</div>
+						<div>
+							<img src="img/2.png">
+						</div>
+						<div>
+							<img src="img/3.png">
+						</div>
+					</div>
+					</center>
+				</div>
+		</div>
 		<div class="section" id="section0">
 			<section class="number">
 				<article id="yesterday">
@@ -76,47 +110,6 @@
 
 			</section>
 
-		</div>
-
-		<div class="section" id="section2">
-				
-				<div style="width:50%;float:left;color:#38985A;font-weight:bold;font-size:20px" >
-					오늘 들어온 분실물
-					<center>
-						<div class="bxslider">
-						<div>
-							<img src="img/1.png">
-						</div>
-						<div>
-							<img src="img/2.png">
-						</div>
-						<div>
-							<img src="img/3.png">
-						</div>
-					</div>	
-					</center>
-								
-				</div>
-
-				<div style="width:50%;float:left;color:#38985A;font-weight:bold;font-size:20px">
-					어제 들어온 분실물
-					<center>
-					<div class="bxslider">
-						<div>
-							<img src="img/1.png">
-						</div>
-						<div>
-							<img src="img/2.png">
-						</div>
-						<div>
-							<img src="img/3.png">
-						</div>
-					</div>
-					</center>
-					
-				</div>
-					
-				
 		</div>
 	</div>
 
