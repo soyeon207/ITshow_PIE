@@ -31,13 +31,14 @@ nav{
    	max-height: 63px;
    	height: 63px;
    	margin-bottom: 15px;
+   	margin-left:15px;
     float: left;
 }
 a{
    	text-decoration: none;
 }
 .justify-content-center{
-   	background-color: #38985A;
+   	background-color: #81c147;
     padding-top: 10px;
     position: absolute;
     min-width: 100%;
