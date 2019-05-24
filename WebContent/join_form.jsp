@@ -6,6 +6,10 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript">
         function checkValue(){
+        	if(!document.userInfo.email.value){
+                alert("이메일을 입력하세요.");
+                return false;
+            }
             if(!document.userInfo.id.value){
                 alert("아이디를 입력하세요.");
                 return false;
@@ -48,6 +52,11 @@
     <form action="join_result.jsp" method="post" name="userInfo" onsubmit="return checkValue()">
         <div id = "header">
 	        <table width="90%" cellpadding="10" border= "1" align="center" rules="groups">
+	        	<tr>
+                    <td width=300 align="center">
+                    	<input type="text" name="email" maxlength="30" placeholder="이메일">
+					</td>
+                </tr>
                 <tr>
                     <td width=300 align="center">
                     	<input type="text" name="id" maxlength="30" placeholder="아이디">
