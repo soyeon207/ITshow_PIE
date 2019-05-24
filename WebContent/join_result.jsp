@@ -4,15 +4,19 @@
 <% 
       	request.setCharacterEncoding("utf-8");
 
+		String email = request.getParameter("email");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		String member_query = "insert into member (id, pw) value (?, ?)";
+		String member_query = "insert into member (email, id, pw) value (?, ?, ?)";
 		
 		try{
+			chkEmail(email);
+			
 			pstmt = conn.prepareStatement(member_query); 
-			pstmt.setString(1,id);
-			pstmt.setString(2,pw);
+			pstmt.setString(1,email);
+			pstmt.setString(2,id);
+			pstmt.setString(3,pw);
 			pstmt.executeUpdate();
 			
 			System.out.println("Inserting Board Successfully!"); 
