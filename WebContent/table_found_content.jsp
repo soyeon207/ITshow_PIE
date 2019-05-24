@@ -17,7 +17,7 @@
 	String contents = "";
 	String id = "";
 	String date = "";
-	String img_url = "";
+	String img = "";
 	String space = "";
 	
 	String select_board_content = "select * from found_board where bnum=" + bnum;
@@ -29,7 +29,7 @@
 		contents = rs.getString("contents");
 		id = rs.getString("id");
 		date = rs.getString("date");
-		img_url = rs.getString("img_url");
+		img = rs.getString("img");
 		space = rs.getString("space");
 	}
 %>
@@ -41,7 +41,7 @@
 	</tr>
 	<tr>
 		<td colspan="3">
-		<%if(img_url != null){ %>
+		<%if(img != null){ %>
 			<img src="img_view.jsp?bnum=<%= bnum %>"><br>
 		<%} %>
 			<textarea><%= contents %></textarea>

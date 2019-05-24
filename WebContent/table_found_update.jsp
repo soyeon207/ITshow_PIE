@@ -5,29 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-	function formChk(){
-		var f = document.frm.f;
-		var file = document.frm.file;
-		var title = document.frm.title;
-		var contents = document.frm.contents;
-		
-		if(title.value == ""){
-			alert("제목을 입력하세요.");
-			title.focus();
-			return;
-		}
-		if(contents.value == ""){
-			alert("내용을 입력하세요.");
-			contents.focus();
-			return;
-		}
-		
-		file.value = f.value;
-		
-		frm.submit();
-	}
-</script>
+<script src="js/formChk.js"></script>
 </head>
 <body>
 <%@include file="db_conn.jsp" %>
@@ -38,7 +16,6 @@
 	String contents = "";
 	String id = "";
 	String date = "";
-	String img_url = "";
 	String space = "";
 	
 	String select_query = "select * from found_board where bnum="+bnum;
@@ -50,7 +27,6 @@
 		contents = rs.getString("contents");
 		id = rs.getString("id");
 		date = rs.getString("date");
-		img_url = rs.getString("img_url");
 	}
 %>
 <form action="proc_table_found_update.jsp" name="frm" method="post">
@@ -68,7 +44,7 @@
 		</tr>
 		<tr>
 			<td>
-				<input type="file" id="f" name="f" value="<%= img_url %>">
+				<input type="file" id="f" name="f">
 				<input type="hidden" name="file">
 			</td>
 			

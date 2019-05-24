@@ -15,7 +15,7 @@
 	String update_query = "";
 
 	if(file_url != ""){
-		update_query = "update found_board set title=?,contents=?,img=?,img_url=? where bnum="+bnum;
+		update_query = "update found_board set title=?,contents=?,img=? where bnum="+bnum;
 	}
 	else{
 		update_query = "update found_board set title=?,contents=? where bnum="+bnum;
@@ -31,7 +31,6 @@
 			File imgfile = new File(file_url); 
 			FileInputStream fin = new FileInputStream(imgfile); 
 			pstmt.setBinaryStream(3,fin,(int)imgfile.length());
-			pstmt.setString(4,file_url);
 		}
 		pstmt.executeUpdate(); 
 		System.out.println("Update Board Successfully!"); 

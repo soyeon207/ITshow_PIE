@@ -5,29 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-	function formChk(){
-		var f = document.frm.f;
-		var file = document.frm.file;
-		var title = document.frm.title;
-		var contents = document.frm.contents;
-		
-		if(title.value == ""){
-			alert("제목을 입력하세요.");
-			title.focus();
-			return;
-		}
-		if(contents.value == ""){
-			alert("내용을 입력하세요.");
-			contents.focus();
-			return;
-		}
-		
-		file.value = f.value;
-		
-		frm.submit();
-	}
-</script>
+<script src="js/formChk.js"></script>
 </head>
 <body>
 <%

@@ -15,7 +15,7 @@
 	
 	String board_query = "";
 
-	board_query = "insert into found_board (title, contents, date, space, id, img, img_url, d_day) value (?, ?, ?, ?, ?, ?, ?, 7)";
+	board_query = "insert into found_board (title, contents, date, space, id, img, d_day) value (?, ?, ?, ?, ?, ?, 7)";
 	
 	try{ 
 		
@@ -30,12 +30,9 @@
 			File imgfile = new File(file_url); 
 			FileInputStream fin = new FileInputStream(imgfile); 
 			pstmt.setBinaryStream(6,fin,(int)imgfile.length());
-			pstmt.setString(7,file_url);
 		}
 		else{
-			System.out.println("힝구");
 			pstmt.setNull(6,java.sql.Types.NULL);
-			pstmt.setNull(7,java.sql.Types.NULL);
 		}
 		pstmt.executeUpdate(); 
 		System.out.println("Inserting Board Successfully!"); 
