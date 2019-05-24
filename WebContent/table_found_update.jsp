@@ -30,28 +30,43 @@
 </script>
 </head>
 <body>
+<%@include file="db_conn.jsp" %>
 <%
 	request.setCharacterEncoding("utf-8");
-	int space = Integer.parseInt(request.getParameter("space"));
+	int bnum = Integer.parseInt(request.getParameter("bnum"));
+	String title ="";
+	String contents = "";
+	String id = "";
+	String date = "";
+	String img = "";
 	
-	System.out.println(space);
+	String select_query = "select * from found_board where bnum="+bnum;
+	
+	stmt = conn.createStatement();
+	rs = stmt.executeQuery(select_query);
+	if(rs.next()) {
+		title = rs.getString("title");
+		contents = rs.getString("contents");
+		id = rs.getString("id");
+		date = rs.getString("date");
+		img = rs.getString("img");
+	}
 %>
 <form action="proc_table_found_write.jsp" name="frm" method="post">
 	<table>
 		<tr>
 			<td>
-				<input type="text" id="title" name="title">
+				<input type="text" id="title" name="title" value="<%= title %>">
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<textarea id="contents" name="contents"></textarea>
-				<input type="hidden" name="space" value="<%= space %>">
+				<textarea id="contents" name="contents"><%= contents %></textarea>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<input type="file" id="f" name="f">
+				<input type="file" id="f" name="f" value="<%= img %>">
 				<input type="hidden" name="file">
 			</td>
 			

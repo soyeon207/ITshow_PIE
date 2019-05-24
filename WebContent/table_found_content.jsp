@@ -17,6 +17,7 @@
 	String contents = "";
 	String id = "";
 	String date = "";
+	String img = "";
 	
 	String select_board_content = "select * from found_board where bnum=" + bnum;
 	String select_file_content = "select * from found_images where bnum=" + bnum;
@@ -28,6 +29,7 @@
 		contents = rs.getString("contents");
 		id = rs.getString("id");
 		date = rs.getString("date");
+		img = rs.getString("img");
 	}
 %>
 <table>
@@ -38,8 +40,17 @@
 	</tr>
 	<tr>
 		<td colspan="3">
-			<textarea><%= contents %></textarea>
+		<%if(img != null){ %>
+			<img src="img_view.jsp?bnum=<%= bnum %>">
+		<%} %>
+			<textarea>
+				<%= contents %>
+			</textarea>
 		</td>
+	</tr>
+	<tr>
+		<td><a href="proc_table_found_delete.jsp?bnum=<%=bnum %>"><button>삭제</button></a></td>
+		<td><a href="proc_table_found_update.jsp?bnum=<%=bnum %>"><button>수정</button></a></td>
 	</tr>
 </table>
 </body>
