@@ -38,7 +38,8 @@
 	String contents = "";
 	String id = "";
 	String date = "";
-	String img = "";
+	String img_url = "";
+	String space = "";
 	
 	String select_query = "select * from found_board where bnum="+bnum;
 	
@@ -49,10 +50,10 @@
 		contents = rs.getString("contents");
 		id = rs.getString("id");
 		date = rs.getString("date");
-		img = rs.getString("img");
+		img_url = rs.getString("img_url");
 	}
 %>
-<form action="proc_table_found_write.jsp" name="frm" method="post">
+<form action="proc_table_found_update.jsp" name="frm" method="post">
 	<table>
 		<tr>
 			<td>
@@ -62,11 +63,12 @@
 		<tr>
 			<td>
 				<textarea id="contents" name="contents"><%= contents %></textarea>
+				<input type="hidden" name="bnum" value="<%= bnum %>">
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<input type="file" id="f" name="f" value="<%= img %>">
+				<input type="file" id="f" name="f" value="<%= img_url %>">
 				<input type="hidden" name="file">
 			</td>
 			
@@ -75,6 +77,7 @@
 			<td>
 				<input type="button" value="작성" onclick="formChk()">
 				<input type="reset" value="다시">
+				<a href="table_found.jsp?space=<%=space %>"><button>돌아가기</button></a>
 			</td>
 		</tr>
 	</table>

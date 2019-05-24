@@ -13,11 +13,11 @@
 	int space = Integer.parseInt(request.getParameter("space"));
 	Timestamp date = new Timestamp(System.currentTimeMillis());
 	
-	String board_query = "insert into found_board (title, contents, date, space, id, img, d_day) value (?, ?, ?, ?, ?, ?, 7)";
+	String board_query = "";
+
+	board_query = "insert into found_board (title, contents, date, space, id, img, img_url, d_day) value (?, ?, ?, ?, ?, ?, ?, 7)";
 	
 	try{ 
-		File imgfile = new File(file_url); 
-		FileInputStream fin = new FileInputStream(imgfile); 
 		
 		//board내용 -> db저장
 		pstmt = conn.prepareStatement(board_query); 
@@ -26,9 +26,18 @@
 		pstmt.setTimestamp(3,date);
 		pstmt.setInt(4,space);
 		pstmt.setString(5,"아이디");
-		pstmt.setBinaryStream(6,fin,(int)imgfile.length());
+		if(file_url != ""){
+			File imgfile = new File(file_url); 
+			FileInputStream fin = new FileInputStream(imgfile); 
+			pstmt.setBinaryStream(6,fin,(int)imgfile.length());
+			pstmt.setString(7,file_url);
+		}
+		else{
+			System.out.println("힝구");
+			pstmt.setNull(6,java.sql.Types.NULL);
+			pstmt.setNull(7,java.sql.Types.NULL);
+		}
 		pstmt.executeUpdate(); 
-		
 		System.out.println("Inserting Board Successfully!"); 
 		pstmt.close(); 
 		conn.close(); 

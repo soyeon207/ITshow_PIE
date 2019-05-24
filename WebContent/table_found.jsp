@@ -25,7 +25,7 @@
 	
 	System.out.println(space);
 		
-	String select_board_result = "select * from found_board where space=" + space;
+	String select_board_result = "select * from found_board where space=" + space + " order by bnum desc";
 	String select_board_count = "select count(*) from found_board where space=" + space;
 	
 	stmt = conn.createStatement();

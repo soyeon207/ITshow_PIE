@@ -3,36 +3,30 @@
 
 <%@ page import="java.io.*"%>
 
-<% Blob image = null;
+<%@ include file="db_conn.jsp" %>
+<% 
 
-Connection con = null;
+request.setCharacterEncoding("utf-8");
+int bnum = Integer.parseInt(request.getParameter("bnum"));
 
+Blob image = null;
 byte[ ] imgData = null ;
 
-Statement stmt = null;
-
-ResultSet rs = null;
+out.clear(); //out--> jsp자체 객체
+out=pageContext.pushBody();
 
 try {
-
-Class.forName("com.mysql.jdbc.Driver");
-
-con = DriverManager.getConnection("jdbc:mysql://localhost:3306/lost_and_found","root","0000");
-
-stmt = con.createStatement();
-
-rs = stmt.executeQuery("select img from found_board where bnum = 4");
+stmt = conn.createStatement();
+rs = stmt.executeQuery("select img from found_board where bnum =" + bnum);
 
 if (rs.next()) {
-
+	
 image = rs.getBlob(1);
-
 imgData = image.getBytes(1,(int)image.length());
 
 } else {
-
+	
 out.println("Display Blob Example");
-
 out.println("image not found for given id>");
 
 return;
@@ -41,8 +35,7 @@ return;
 
 // display the image 
 
-response.setContentType("image/gif");
-
+response.setContentType("application/octet-stream");
 OutputStream o = response.getOutputStream();
 
 o.write(imgData);
@@ -67,7 +60,7 @@ rs.close();
 
 stmt.close();
 
-con.close();
+conn.close();
 
 } catch (SQLException e) {
 
