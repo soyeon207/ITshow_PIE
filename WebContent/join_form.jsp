@@ -54,7 +54,7 @@
 	        <table width="90%" cellpadding="10" border= "1" align="center" rules="groups">
 	        	<tr>
                     <td width=300 align="center">
-                    	<input type="text" name="email" maxlength="30" placeholder="이메일">
+                    	<input type="text" name="email" maxlength="30" placeholder="학교 이메일">
 					</td>
                 </tr>
                 <tr>

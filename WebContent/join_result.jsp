@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="db_conn.jsp"%>
-<script src="js/check_email.js"></script>
 <% 
       	request.setCharacterEncoding("utf-8");
 
@@ -11,9 +10,7 @@
 		
 		String member_query = "insert into member (email, id, pw) value (?, ?, ?)";
 		
-		try{
-			chkEmail(email);
-			
+		try{			
 			pstmt = conn.prepareStatement(member_query); 
 			pstmt.setString(1,email);
 			pstmt.setString(2,id);
