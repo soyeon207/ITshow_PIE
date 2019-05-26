@@ -7,16 +7,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
 <body>
 <%@include file="db_conn.jsp"%>
-<table>
-	<tr>
-		<td>숫자</td>
-		<td>남은 날짜</td>
-		<td>제목</td>
-		<td>작성자</td>
-		<td>날짜</td>
+<jsp:include page="nav.jsp"/>
+<table style="margin-top: 120px;">
+	<tr style="position: relation; top: 80px;">
+		<th>숫자</th>
+		<th>남은 날짜</th>
+		<th class="td3">제목</th>
+		<th>작성자</th>
+		<th>날짜</th>
 	</tr>
 <%
 	request.setCharacterEncoding("utf-8");
