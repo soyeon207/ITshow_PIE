@@ -7,15 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<img id="Image-Maps-Com-image-maps-2019-05-06-095144" src="http://www.image-maps.com/m/private/0/4m3r046mpl2nji9ghtejao3523_b.png" border="0" width="1124" height="623" orgWidth="1124" orgHeight="623" usemap="#image-maps-2019-05-06-095144" alt="" />
-<map name="image-maps-2019-05-06-095144" id="ImageMapsCom-image-maps-2019-05-06-095144">
-<area id="아트스튜디오" alt="아트스튜디오" title="아트스튜디오" href="table_found.jsp?space=91" shape="rect" coords="489,363,769,437" style="outline:none;" target="_self"     />
-<area id="학생쉼터" alt="학생쉼터" title="학생쉼터" href="table_found.jsp?space=87" shape="rect" coords="133,555,266,620" style="outline:none;" target="_self"     />
-<area id="컨설팅룸" alt="컨설팅룸" title="컨설팅룸" href="table_found.jsp?space=88" shape="rect" coords="264,555,498,623" style="outline:none;" target="_self"     />
-<area id="진로활동실" alt="진로활동실" title="진로활동실" href="table_found.jsp?space=89" shape="rect" coords="500,558,771,622" style="outline:none;" target="_self"     />
-<area id="음악감상실" alt="음악감상실" title="음악감상실" href="table_found.jsp?space=90" shape="rect" coords="770,558,1100,622" style="outline:none;" target="_self"     />
-<area id="계단" alt="계단" title="계단" href="table_found.jsp?space=6" shape="rect" coords="766,14,1024,112" style="outline:none;" target="_self"     />
-<area shape="rect" coords="1122,621,1124,623" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+<img id="Image-Maps-Com-image-maps-2019-05-26-090051" src="http://www.image-maps.com/m/private/0/c6ke3dovsdmionqpo2r300smo2_-1.jpg" border="0" width="1000" height="558" orgWidth="1000" orgHeight="558" usemap="#image-maps-2019-05-26-090051" alt="" />
+<map name="image-maps-2019-05-26-090051" id="ImageMapsCom-image-maps-2019-05-26-090051">
+<area  alt="급식실쪽계단" title="급식실쪽계단" href="table_found.jsp?space=6" shape="rect" coords="731,116,866,262" style="outline:none;" target="_self"     />
+<area  alt="학생쉼터" title="학생쉼터" href="table_found.jsp?space=87" shape="rect" coords="132,377,244,484" style="outline:none;" target="_self"     />
+<area  alt="컨설팅룸" title="컨설팅룸" href="table_found.jsp?space=88" shape="rect" coords="245,378,424,485" style="outline:none;" target="_self"     />
+<area  alt="진로활동실" title="진로활동실" href="table_found.jsp?space=89" shape="rect" coords="427,374,606,481" style="outline:none;" target="_self"     />
+<area  alt="음악감상실" title="음악감상실" href="table_found.jsp?space=90" shape="rect" coords="610,376,866,483" style="outline:none;" target="_self"     />
+<area shape="rect" coords="998,556,1000,558" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+<area  alt="아트스튜디오" title="아트스튜디오" href="table_found.jsp?space=91" shape="poly" coords="425,114,428,314,672,318,675,263,727,259,729,116" style="outline:none;" target="_self"     />
 </map>
 </body>
 </html>

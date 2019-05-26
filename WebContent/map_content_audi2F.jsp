@@ -7,18 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<img id="Image-Maps-Com-image-maps-2019-05-06-094747" src="http://www.image-maps.com/m/private/0/4m3r046mpl2nji9ghtejao3523_f2_2.png" border="0" width="1131" height="623" orgWidth="1131" orgHeight="623" usemap="#image-maps-2019-05-06-094747" alt="" />
-<map name="image-maps-2019-05-06-094747" id="ImageMapsCom-image-maps-2019-05-06-094747">
-<area id="Englishcafe" alt="Englishcafe" title="Englishcafe" href="table_found.jsp?space=98" shape="rect" coords="517,365,796,437" style="outline:none;" target="_self"     />
-<area id="창고" alt="창고" title="창고" href="table_found.jsp?space=97" shape="rect" coords="161,554,253,619" style="outline:none;" target="_self"     />
-<area id="3-1" alt="3-1" title="3-1" href="table_found.jsp?space=31" shape="rect" coords="256,554,515,618" style="outline:none;" target="_self"     />
-<area id="3-2" alt="3-2" title="3-2" href="table_found.jsp?space=32" shape="rect" coords="516,558,840,620" style="outline:none;" target="_self"     />
-<area id="3-3" alt="3-3" title="3-3" href="table_found.jsp?space=33" shape="rect" coords="844,560,1129,621" style="outline:none;" target="_self"     />
-<area alt="청소비품실" title="청소비품실" href="table_found.jsp?space=100" shape="rect" coords="803,249,873,341" style="outline:none;" target="_self"     />
-<area id="화장실" alt="화장실" title="화장실" href="table_found.jsp?space=99" shape="rect" coords="801,152,871,244" style="outline:none;" target="_self"     />
-<area id="계단" alt="계단" title="계단" href="table_found.jsp?space=6" shape="rect" coords="1052,110,1124,205" style="outline:none;" target="_self"     />
-<area id="예절교육실" alt="예절교육실" title="예절교육실" href="table_found.jsp?space=101" shape="rect" coords="873,11,1049,79" style="outline:none;" target="_self"     />
-<area shape="rect" coords="1129,621,1131,623" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+<img id="Image-Maps-Com-image-maps-2019-05-26-083356" src="http://www.image-maps.com/m/private/0/c6ke3dovsdmionqpo2r300smo2_2.jpg" border="0" width="1000" height="558" orgWidth="1000" orgHeight="558" usemap="#image-maps-2019-05-26-083356" alt="" />
+<map name="image-maps-2019-05-26-083356" id="ImageMapsCom-image-maps-2019-05-26-083356">
+<area  alt="예절교육실" title="예절교육실" href="table_found.jsp?space=101" shape="rect" coords="367,32,866,150" style="outline:none;" target="_self"     />
+<area  alt="영어카페" title="영어카페" href="table_found.jsp?space=98" shape="rect" coords="365,152,568,356" style="outline:none;" target="_self"     />
+<area  alt="3-1" title="3-1" href="table_found.jsp?space=31" shape="rect" coords="197,415,419,520" style="outline:none;" target="_self"     />
+<area  alt="3-2" title="3-2" href="table_found.jsp?space=32" shape="rect" coords="421,413,643,518" style="outline:none;" target="_self"     />
+<area  alt="3-3" title="3-3" href="table_found.jsp?space=33" shape="rect" coords="643,417,868,521" style="outline:none;" target="_self"     />
+<area  alt="강당동2층여자화장실" title="강당동2층여자화장실" href="table_found.jsp?space=99" shape="rect" coords="572,152,666,294" style="outline:none;" target="_self"     />
+<area  alt="청소비품실" title="청소비품실" href="table_found.jsp?space=100" shape="rect" coords="573,297,667,359" style="outline:none;" target="_self"     />
+<area  alt="급식실쪽계단" title="급식실쪽계단" href="table_found.jsp?space=6" shape="rect" coords="732,152,867,355" style="outline:none;" target="_self"     />
+<area shape="rect" coords="998,556,1000,558" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
 </map>
 </body>
 </html>
