@@ -47,7 +47,7 @@
     <body>
 
 
-	<%!
+	<%
 		ArrayList<String> today_title = new ArrayList<String>();
 		ArrayList<String> yester_title = new ArrayList<String>();
 		int today_date;
