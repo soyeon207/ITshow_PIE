@@ -19,7 +19,7 @@ body {
   width: 200px;
   position: fixed;
   z-index: 1;
-  top: 100px;
+  top: 80px;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
@@ -85,7 +85,7 @@ body {
 %>
 <body>
 <table width="100%" height="100%">
-	<tr height="150px">
+	<tr height="100px">
 		<td>
 			<jsp:include page="nav.jsp" flush="false"/>
 		</td>
