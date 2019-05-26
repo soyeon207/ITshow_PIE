@@ -17,7 +17,7 @@
 			return;
 		}
 
-	    if (!(ext == "gif" || ext == "jpg" || ext == "png")) {
+	    if (f.value != "" && !(ext == "gif" || ext == "jpg" || ext == "png")) {
 	        alert("이미지파일 (.jpg, .png, .gif ) 만 업로드 가능합니다.");
 	        return;
 	    }
