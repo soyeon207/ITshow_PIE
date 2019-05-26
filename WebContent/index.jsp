@@ -1,11 +1,16 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Locale"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" 
 	contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
 %>
-
+<%@ include file="db_conn.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
+    
         <meta charset=utf-8>
         <title>미림 분실물 센터</title>
        	
@@ -28,8 +33,6 @@
     			  slideWidth: 300
     			}); 
     		  
-    		  $('.yester_num').text('70');
-    		  $('.today_num').text('80');
     		  $('.yester_num').click(function() {
     			  $('#yester_mul').css("display","inline");
     		  });
@@ -43,24 +46,43 @@
     </head>
     <body>
 
+
+	<%
+		ArrayList<String> today_title = new ArrayList<String>();
+		ArrayList<String> yester_title = new ArrayList<String>();
+		ArrayList<String> today_bnum = new ArrayList<String>();
+		ArrayList<String> yester_bnum = new ArrayList<String>();
+		int today_date;
+	%>
+	<%
+	
+	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat ( "dd", Locale.KOREA );
+	Date currentTime = new Date();
+	String mTime = mSimpleDateFormat.format (currentTime);
+	today_date = Integer.parseInt(mTime);
+	
+	String select_title = "select * from found_board";
+	
+	pstmt = conn.prepareStatement(select_title);
+	rs = pstmt.executeQuery();
+	
+	while(rs.next()) {
+		int d = Integer.parseInt(rs.getString("date").substring(8,10));
+		if(today_date == d){
+			today_title.add(rs.getString("title"));
+			today_bnum.add(rs.getString("bnum"));
+		}
+		else if((today_date-1)==d){
+			yester_title.add(rs.getString("title"));
+			yester_bnum.add(rs.getString("bnum"));
+		}
+	
+	}
+	%>
+	
 	<div id="fullpage">
 		<div class="section" id="section2">
-				<div style="width:50%;float:left;color:#55ce3c;font-weight:bold;font-size:20px" >
-					오늘 들어온 분실물
-					<center>
-						<div class="bxslider">
-						<div>
-							<img src="img/1.png">
-						</div>
-						<div>
-							<img src="img/2.png">
-						</div>
-						<div>
-							<img src="img/3.png">
-						</div>
-					</div>	
-					</center>		
-				</div>
+				
 				<div style="width:50%;float:left;color:#55ce3c;font-weight:bold;font-size:20px">
 					어제 들어온 분실물
 					<center>
@@ -77,34 +99,58 @@
 					</div>
 					</center>
 				</div>
+				
+				<div style="width:50%;float:left;color:#55ce3c;font-weight:bold;font-size:20px" >
+					오늘 들어온 분실물
+					<center>
+						<div class="bxslider">
+						<div>
+							<img src="img/1.png">
+						</div>
+						<div>
+							<img src="img/2.png">
+						</div>
+						<div>
+							<img src="img/3.png">
+						</div>
+					</div>	
+					</center>		
+				</div>
 		</div>
 		<div class="section" id="section0">
 			<section class="number">
 				<article id="yesterday">
 					<span class="title">오늘 들어온 분실물</span><br> 
 					<span class="yester_num">
-					50
+					<%=today_title.size() %>
 					</span>
-					        <select multiple size="5" style="width:100px;text-align:center;display:none;" id="yester_mul">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
+					        <select multiple size="5" style="width:100px;text-align:center;display:none;font-size:15px;" id="yester_mul" onchange="if(this.value) location.href=(this.value);">
+            				<%
+            					for(int i=0;i<today_title.size();i++) {
+            						
+            		   			%>
+            		   				<option value="table_found_content.jsp?bnum=<%= today_bnum.get(i) %>"><%=today_title.get(i)%></option>
+            		   				
+            		   			<% 
+            					}
+            				%>
         </select>
 				</article>
 
 				<article id="today">
 					<span class="title">어제 들어온 분실물</span><br> 
-					<span class="today_num">60</span>
-					        <select multiple size="5" style="width:100px;text-align:center;display:none" id="today_mul">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
+					<span class="today_num"><%=yester_title.size() %></span>
+					        <select multiple size="5" style="width:100px;text-align:center;display:none;font-size:15px;" id="today_mul" onchange="if(this.value) location.href=(this.value);">
+            				<%
+            					for(int i=0;i<yester_title.size();i++) {
+            		   			%>
+            		   				
+            		   				<option value="table_found_content.jsp?bnum=<%= yester_bnum.get(i) %>"><%=yester_title.get(i)%></option>
+            		   				
+            		   			<% 
+            					}
+            				%>
+            				
         </select>
 				</article>
 
