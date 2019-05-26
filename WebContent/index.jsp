@@ -50,6 +50,8 @@
 	<%
 		ArrayList<String> today_title = new ArrayList<String>();
 		ArrayList<String> yester_title = new ArrayList<String>();
+		ArrayList<String> today_bnum = new ArrayList<String>();
+		ArrayList<String> yester_bnum = new ArrayList<String>();
 		int today_date;
 	%>
 	<%
@@ -68,9 +70,11 @@
 		int d = Integer.parseInt(rs.getString("date").substring(8,10));
 		if(today_date == d){
 			today_title.add(rs.getString("title"));
+			today_bnum.add(rs.getString("bnum"));
 		}
 		else if((today_date-1)==d){
 			yester_title.add(rs.getString("title"));
+			yester_bnum.add(rs.getString("bnum"));
 		}
 	
 	}
@@ -125,7 +129,7 @@
             					for(int i=0;i<today_title.size();i++) {
             						
             		   			%>
-            		   				<option value="<%=i%>"><%=today_title.get(i)%></option>
+            		   				<option value="table_found_content.jsp?bnum=<%= today_bnum.get(i) %>"><%=today_title.get(i)%></option>
             		   				
             		   			<% 
             					}
@@ -136,12 +140,12 @@
 				<article id="today">
 					<span class="title">어제 들어온 분실물</span><br> 
 					<span class="today_num"><%=yester_title.size() %></span>
-					        <select multiple size="5" style="width:100px;text-align:center;display:none;font-size:15px;" id="today_mul">
+					        <select multiple size="5" style="width:100px;text-align:center;display:none;font-size:15px;" id="today_mul" onchange="if(this.value) location.href=(this.value);">
             				<%
             					for(int i=0;i<yester_title.size();i++) {
-            						
             		   			%>
-            		   				<option value="<%=i%>"><%=yester_title.get(i)%></option>
+            		   				
+            		   				<option value="table_found_content.jsp?bnum=<%= yester_bnum.get(i) %>"><%=yester_title.get(i)%></option>
             		   				
             		   			<% 
             					}
