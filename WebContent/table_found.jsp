@@ -19,6 +19,7 @@
 		<td>날짜</td>
 	</tr>
 <%
+	int paging_count;
 	request.setCharacterEncoding("utf-8");
 	int space = Integer.parseInt(request.getParameter("space"));
 	int count = 0;
@@ -33,6 +34,7 @@
 	if(rs.next()) count = rs.getInt(1);
 	
 	rs = stmt.executeQuery(select_board_result);
+	paging_count = count/10+1;
 	
 	if(count == 0){ %>
 	<tr>
@@ -58,6 +60,17 @@
 	} 
 		} 
 %>
+	<tr>
+		<td colspan="5" style="text-align:center">
+			<%
+				for(int i=0;i<paging_count;i++){
+					%>
+						<%=i+1 %>
+					<% 
+				}
+			%>
+		</td>
+	</tr>
 	<tr>
 		<td colspan="5"><a href="table_found_write.jsp?space=<%= space %>"><button>글쓰기</button></a></td>
 	</tr>
