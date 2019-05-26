@@ -4,6 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="db_conn.jsp"%>
+<%@include file="cookie.jsp"%>
 <%
 	request.setCharacterEncoding("utf-8");
 
@@ -25,7 +26,7 @@
 		pstmt.setString(2,contents); 
 		pstmt.setTimestamp(3,date);
 		pstmt.setInt(4,space);
-		pstmt.setString(5,"아이디");
+		pstmt.setString(5,cookie_id);
 		if(file_url != ""){
 			File imgfile = new File(file_url); 
 			FileInputStream fin = new FileInputStream(imgfile); 

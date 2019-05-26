@@ -10,6 +10,7 @@
 </head>
 <body>
 <%@ include file="db_conn.jsp" %>
+<%@ include file="cookie.jsp" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	int bnum = Integer.parseInt(request.getParameter("bnum"));
@@ -48,8 +49,10 @@
 		</td>
 	</tr>
 	<tr>
+	<%if(cookie_id.equals(id)){ %>
 		<td><a href="proc_table_found_delete.jsp?bnum=<%=bnum %>"><button>삭제</button></a></td>
 		<td><a href="table_found_update.jsp?bnum=<%=bnum %>"><button>수정</button></a></td>
+	<%} %>
 		<td><a href="table_found.jsp?space=<%=space %>"><button>돌아가기</button></a></td>
 	</tr>
 </table>

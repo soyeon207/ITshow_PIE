@@ -26,7 +26,7 @@
 	if(rs.next()) {
 		if(rs.getString(1).equals(pw)){
 			Cookie cookie = new Cookie("id", id);
-			cookie.setMaxAge(60);
+			cookie.setMaxAge(60*60*24);
 			response.addCookie(cookie);
 			response.sendRedirect("index_temp.jsp");
 		}else{

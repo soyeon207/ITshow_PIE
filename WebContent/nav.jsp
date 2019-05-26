@@ -1,3 +1,4 @@
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <head>
@@ -17,6 +18,7 @@
 <title>Hello, world!</title>
   </head>
   <body>
+  <%@ include file="cookie.jsp" %>
       <nav>
         <div class="justify-content-center">
         	<div>
@@ -24,12 +26,22 @@
 					<img src="img/logo.png" alt="logo" class="logoImg">
 				</a>
 				<ul class="user">
+				<% if(cookie_id == null){ %>
 					<li>
 						<a href="login.jsp" class="button button1 nav-link">로그인</a>
 					</li>
 			    	<li>
 			    		<a href="join.jsp" class="button button1 nav-link">회원가입</a>
 			    	</li>
+				<% } 
+					else{%>
+					<li>
+						<%= cookie_id %>님 환영합니다!
+					</li>
+					<li>
+						<a href="logout.jsp" class="button button1 nav-link">로그아웃</a>
+					</li>
+				<% } %>
 				</ul>
 				<ul style="position: absolute; right: 350px;">
 					<li class="nav-item content-li">
