@@ -14,14 +14,15 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 
-	int bnum = 1;
+	int bnum = Integer.parseInt(request.getParameter("bnum"));
 	int cnum = 1;
 	String title = "";
 	String contents = "";
-	String id = "admin";
+	String id = "";
 	String date = "";
 	String img = "";
-	String space = "";
+	int space = Integer.parseInt(request.getParameter("space"));
+	
 	
 	String select_board_content = "select * from found_board where bnum=" + bnum;
 	
@@ -33,7 +34,6 @@
 		id = rs.getString("id");
 		date = rs.getString("date");
 		img = rs.getString("img");
-		space = rs.getString("space");
 		bnum = rs.getInt("bnum");
 	}
 %>
@@ -83,7 +83,7 @@
 		<td><%= id %></td>
 		<td><%= comment_contents %></td>
 		<td><a href="#"><button>수정</button></a>
-		<a href="table_found_comment_delete.jsp?space=<%= space %>&bnum=<%= bnum %>&cnum=<%= cnum %>"><button>삭제</button></a></td>
+		<a href="table_found_comment_delete.jsp?space=<%= space %>&bnum=<%= bnum %>"><button>삭제</button></a></td>
 	</tr>
 <% 
 	} 
@@ -94,7 +94,7 @@
 	<tr>
 		<td><%= id %><input type="hidden" name="id" value="<%= id %>"></td>
 		<td><textarea name="comment_contents"></textarea></td>
-		<td><input type="hidden" name="space" value="<%= 8 %>">
+		<td><input type="hidden" name="space" value="<%= space %>">
 		<input type="hidden" name="bnum" value="<%= bnum %>">
 		<input type="submit" value="등록"></td>
 	</tr>

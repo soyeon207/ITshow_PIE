@@ -13,12 +13,12 @@
 	String id = request.getParameter("id");
 	String contents = request.getParameter("comment_contents");
 	int space = Integer.parseInt(request.getParameter("space"));
+	System.out.println(space);
 	
 	String select_board_count = "select count(*) from found_board where space=" + space;
 	stmt = conn.createStatement();
 	rs = stmt.executeQuery(select_board_count);
 	
-	System.out.println(cnum);
 	String board_query = "insert into found_comment (cnum, bnum, id, contents, space) value (?, ?, ?, ?, ?)";
 	
 	try{ 
@@ -39,7 +39,7 @@
 		System.out.println(e.getMessage()); 
 	} 
 	finally{
-		response.sendRedirect("table_found_content.jsp?space=" + space);
+		response.sendRedirect("table_found_content.jsp?space=" + space+"&bnum="+bnum);
 	}
 
 %>

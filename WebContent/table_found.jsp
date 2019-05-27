@@ -50,9 +50,9 @@
 			Timestamp date = rs.getTimestamp("date");
 %>
 	<tr>
-		<td>1</td>
+		<td><%= bnum%></td>
 		<td><%= d_day %></td>
-		<td><a href="table_found_content.jsp?bnum=<%= bnum %>"><%= title %></a></td>
+		<td><a href="table_found_content.jsp?space=<%= space %>&bnum=<%= bnum %>"><%= title %></a></td>
 		<td><%= id %></td>
 		<td><%= date %></td>
 	</tr>

@@ -9,9 +9,8 @@
 
 	int space = Integer.parseInt(request.getParameter("space"));
 	int bnum = Integer.parseInt(request.getParameter("bnum"));
-	int cnum = Integer.parseInt(request.getParameter("cnum"));
 	
-	String delete_query = "delete from found_comment where space = "+space+" and bnum = "+bnum+" and cnum = "+cnum;
+	String delete_query = "delete from found_comment where space = "+space+" and bnum = "+bnum;
 	
 	try{
 	
@@ -25,6 +24,6 @@
 		System.out.println(e);
 	}
 	finally{
-	response.sendRedirect("table_found_content.jsp?space="+space);
+	response.sendRedirect("table_found_content.jsp?space="+space+"&bnum="+bnum);
 	}
 %>
