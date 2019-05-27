@@ -11,6 +11,7 @@
 </head>
 <body>
 <%@ include file="db_conn.jsp" %>
+<%@ include file="cookie.jsp" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 
@@ -52,9 +53,14 @@
 		</td>
 	</tr>
 	<tr>
+		<%if(cookie_id != null) { %>
 		<td><a href="proc_table_found_delete.jsp?bnum=<%=bnum %>"><button>삭제</button></a></td>
 		<td><a href="table_found_update.jsp?bnum=<%=bnum %>"><button>수정</button></a></td>
 		<td><a href="table_found.jsp?space=<%=space %>"><button>돌아가기</button></a></td>
+		<% } 
+		else{%>
+		<td colspan="3"><a href="table_found.jsp?space=<%=space %>"><button>돌아가기</button></a></td>
+		<%} %>
 	</tr>
 </table>
 <table>
@@ -78,12 +84,21 @@
 	else {
 		while(rs.next()){
 			String comment_contents = rs.getString("contents");
+			String comment_id = rs.getString("id");
+			String comment_cnum = rs.getString("cnum");
 %>
 	<tr>
 		<td><%= id %></td>
+		<%if(cookie_id != null && cookie_id.equals(comment_id)) { %>
 		<td><%= comment_contents %></td>
-		<td><a href="#"><button>수정</button></a>
-		<a href="table_found_comment_delete.jsp?space=<%= space %>&bnum=<%= bnum %>"><button>삭제</button></a></td>
+		<td>
+			<a href="#"><button>수정</button></a>
+			<a href="table_found_comment_delete.jsp?bnum=<%= bnum %>&cnum=<%= comment_cnum %>&space=<%= space %>"><button>삭제</button></a>
+		</td>
+		<% } 
+		else{ %>
+		<td colspan="2"><%= comment_contents %></td>
+		<%} %>
 	</tr>
 <% 
 	} 

@@ -11,6 +11,7 @@
 </head>
 <body>
 <%@include file="db_conn.jsp"%>
+<%@include file="cookie.jsp"%>
 <jsp:include page="nav.jsp"/>
 <table style="margin-top: 120px;">
 	<tr style="position: relation; top: 80px;">
@@ -59,10 +60,11 @@
 <% 
 	} 
 		} 
-%>
+if(cookie_id != null){%>
 	<tr>
 		<td colspan="5"><a href="table_found_write.jsp?space=<%= space %>"><button>글쓰기</button></a></td>
 	</tr>
+<% } %>
 </table>
 </body>
 </html>
