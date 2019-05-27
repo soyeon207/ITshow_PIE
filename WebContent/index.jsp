@@ -52,8 +52,13 @@
 		ArrayList<String> yester_title = new ArrayList<String>();
 		ArrayList<String> today_bnum = new ArrayList<String>();
 		ArrayList<String> yester_bnum = new ArrayList<String>();
-		int today_date;
+		ArrayList<String> today_img = new ArrayList<String>();
+		ArrayList<String> yester_img = new ArrayList<String>();
+		
+		int today_date,null_chk;
 	%>
+	
+	
 	<%
 	
 	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat ( "dd", Locale.KOREA );
@@ -68,13 +73,18 @@
 	
 	while(rs.next()) {
 		int d = Integer.parseInt(rs.getString("date").substring(8,10));
+		
+		null_chk = rs.getString("img")==null?0:1;
+		
 		if(today_date == d){
 			today_title.add(rs.getString("title"));
 			today_bnum.add(rs.getString("bnum"));
+			if(null_chk==1) today_img.add(rs.getString("bnum"));
 		}
 		else if((today_date-1)==d){
 			yester_title.add(rs.getString("title"));
 			yester_bnum.add(rs.getString("bnum"));
+			if(null_chk==1) yester_img.add(rs.getString("bnum"));
 		}
 	
 	}
@@ -87,7 +97,17 @@
 					어제 들어온 분실물
 					<center>
 					<div class="bxslider">
-						<div>
+					
+					<%
+						for(int i=0;i<yester_img.size();i++) {
+					%>
+					<div>
+						<a href="table_found_content.jsp?bnum=<%= yester_img.get(i) %>"><img src="img_view.jsp?bnum=<%= yester_img.get(i) %>"></a>
+					</div>
+					<%
+						}
+					%>
+						<!-- <div>
 							<img src="img/1.png">
 						</div>
 						<div>
@@ -95,7 +115,7 @@
 						</div>
 						<div>
 							<img src="img/3.png">
-						</div>
+						</div> -->
 					</div>
 					</center>
 				</div>
@@ -104,15 +124,15 @@
 					오늘 들어온 분실물
 					<center>
 						<div class="bxslider">
-						<div>
-							<img src="img/1.png">
-						</div>
-						<div>
-							<img src="img/2.png">
-						</div>
-						<div>
-							<img src="img/3.png">
-						</div>
+						<%
+						for(int i=0;i<today_img.size();i++) {
+					%>
+					<div>
+						<a href="table_found_content.jsp?bnum=<%= today_img.get(i) %>"><img src="img_view.jsp?bnum=<%= today_img.get(i) %>"></a>
+					</div>
+					<%
+						}
+					%>
 					</div>	
 					</center>		
 				</div>
@@ -120,7 +140,7 @@
 		<div class="section" id="section0">
 			<section class="number">
 				<article id="yesterday">
-					<span class="title">오늘 들어온 분실물</span><br> 
+					<span class="title">어제 들어온 분실물</span><br> 
 					<span class="yester_num">
 					<%=today_title.size() %>
 					</span>
@@ -138,7 +158,7 @@
 				</article>
 
 				<article id="today">
-					<span class="title">어제 들어온 분실물</span><br> 
+					<span class="title">오늘 들어온 분실물</span><br> 
 					<span class="today_num"><%=yester_title.size() %></span>
 					        <select multiple size="5" style="width:100px;text-align:center;display:none;font-size:15px;" id="today_mul" onchange="if(this.value) location.href=(this.value);">
             				<%
